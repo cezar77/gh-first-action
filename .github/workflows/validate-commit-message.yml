@@ -10,5 +10,5 @@ jobs:
     steps:
       - run: |
         echo "Validate commit message ${{ github.event.head_commit.message }}"
-        message-${{ github.event.head_commit.message }}
+        message=${{ github.event.head_commit.message }}
         ./${{ github.action_path }}/check_length.sh "$message"
