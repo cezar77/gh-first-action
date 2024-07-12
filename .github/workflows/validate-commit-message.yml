@@ -11,5 +11,6 @@ jobs:
       - name: Check commit message length
         run: |
           echo "Validate commit message ${{ github.event.head_commit.message }}"
+          echo "GitHub Action path ${{ github.action_path }}"
           message=${{ github.event.head_commit.message }}
           ./${{ github.action_path }}/check_length.sh "$message"
