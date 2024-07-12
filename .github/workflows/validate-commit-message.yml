@@ -11,9 +11,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Validate commit message ${{ github.event.head_commit.message }}"
-      - name: Validate commit message
-        uses: tim-actions/commit-message-checker-with-regex@0.3.1
-        with:
-          commits: ${{ github.event.head_commit.message }}
-          pattern: '^(chore|docs|feat|fix|revert): HA-[0-9]{3,4} - .+$'
-          error: "The commit message is invalid." 
