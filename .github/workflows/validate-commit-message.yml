@@ -14,6 +14,7 @@ jobs:
       if: (github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Validate commit message ${{ github.event.head_commit.message }}"
       - name: Validate commit message
         uses: tim-actions/commit-message-checker-with-regex@0.3.1
         with:
