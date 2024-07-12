@@ -10,8 +10,6 @@ on:
         types: [closed] 
 jobs:
   validate-commit-message:
-    build:
-      if: (github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     steps:
       - run: echo "Validate commit message ${{ github.event.head_commit.message }}"
