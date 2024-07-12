@@ -1,15 +1,13 @@
 name: Validate commit message
 run-name: Validate commit message
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
-        types: [closed] 
+    types: [closed] 
 jobs:
   validate-commit-message:
+    if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "Validate commit message ${{ github.event.head_commit.message }}"
