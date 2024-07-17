@@ -15,5 +15,5 @@ jobs:
         run: |
           message=${{ github.event.head_commit.message }}
           echo "Validate commit message $message"
-          echo ${pwd}
+          echo $(pwd)
         shell: bash
