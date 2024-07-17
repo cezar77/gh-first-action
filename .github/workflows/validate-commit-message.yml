@@ -16,4 +16,4 @@ jobs:
           echo "Validate commit message ${{ github.event.head_commit.message }}"
           echo "${{ github.action_path }}"
           message=${{ github.event.head_commit.message }}
-          ./$GITHUB_ACTION_PATH/check_length.sh "$message"
+          ./_w/actions/check_length.sh "$message"
