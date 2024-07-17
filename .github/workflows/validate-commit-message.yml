@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
-    branches:
-      - main
 jobs:
   validate-commit-message:
     runs-on: ubuntu-latest
@@ -14,4 +11,4 @@ jobs:
       - name: Check commit message length
         run: |
           echo ${{ github.event.head_commit.message }}
-          echo `ls -lh $(pwd)`
+          echo `ls -lh`
