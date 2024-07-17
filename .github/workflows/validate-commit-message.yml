@@ -12,6 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check commit message length
-        run: |
-          message=${{ github.event.head_commit.message }}
-          echo $message
+        run: echo ${{ github.event.head_commit.message }}
