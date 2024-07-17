@@ -15,4 +15,3 @@ jobs:
         run: |
           message=${{ github.event.head_commit.message }}
           echo $message
-        shell: sh
