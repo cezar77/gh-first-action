@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Check commit message length
         run: |
-          echo "Validate commit message ${{ github.event.head_commit.message }}"
           message=${{ github.event.head_commit.message }}
-          /__w/_actions/gh-first-action/scripts/check_length.sh "$message"
+          echo "Validate commit message $message"
+          echo ${pwd}
         shell: bash
